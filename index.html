@@ -5778,28 +5778,23 @@
   });
   function updateHeroImgParallax(){
     var vh = window.innerHeight;
-    document.querySelectorAll('.hero-img-wrap img').forEach(function(img){
+    document.querySelectorAll('.hero-img-wrap img, .hero img').forEach(function(img){
       var rect = img.parentElement.getBoundingClientRect();
       var delta = (rect.top + rect.height / 2) - vh / 2;
       var offset = Math.max(-40, Math.min(40, delta * 0.12));
       img.style.transform = 'scale(1.25) translateY(' + offset + 'px)';
     });
   }
+  window.addEventListener('scroll', updateHeroImgParallax, { passive: true });
   if(typeof Lenis !== 'undefined'){
     try{
       lenis = new Lenis({ duration: 1.1, smoothWheel: true, easing: function(t){ return Math.min(1, 1.001 - Math.pow(2, -10 * t)); } });
       window.lenis = lenis;
-      var heroImg = document.querySelector('.hero img');
-      lenis.on('scroll', function(e){
-        if(heroImg){
-          var offset = Math.max(0, Math.min(e.scroll * 0.15, 40));
-          heroImg.style.transform = 'scale(1.25) translateY(' + offset + 'px)';
-        }
-        updateHeroImgParallax();
-      });
+      lenis.on('scroll', updateHeroImgParallax);
       requestAnimationFrame(function raf(time){ lenis.raf(time); requestAnimationFrame(raf); });
     } catch(e){ lenis = null; }
   }
+  updateHeroImgParallax();
   function scrollTopNow(){ if(lenis){ lenis.scrollTo(0, {immediate:true}); } else { window.scrollTo({top:0, behavior:'instant'}); } }
   function scrollTopSmooth(){ if(lenis){ lenis.scrollTo(0); } else { window.scrollTo({top:0, behavior:'smooth'}); } }
 
