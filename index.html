@@ -206,6 +206,13 @@
   .produkt-item-cta:hover{ opacity:.85; }
   .produkt-empty{ font-size:14px; color:var(--muted); margin-top:16px; padding:14px; background:var(--surface-2); border:1px dashed var(--line); border-radius:12px; }
   @media (max-width:480px){ .produkt-item-thumb{ width:56px; flex:0 0 56px; } }
+
+  .submit-card{ display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:20px; box-shadow:var(--shadow); }
+  .submit-card-text{ flex:1; min-width:220px; }
+  .submit-card-text h2{ margin:0 0 6px; }
+  .submit-card-text p{ margin:0; font-size:14.5px; color:var(--muted); }
+  .submit-card-cta{ font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:13px; color:var(--accent-ink); background:var(--accent); padding:10px 20px; border-radius:999px; text-decoration:none; white-space:nowrap; }
+  .submit-card-cta:hover{ opacity:.85; }
   .tip-box strong{color:var(--text);}
 
   .table-card{ border:1px solid var(--line); border-radius:8px; overflow:hidden; margin:14px 0 0; background:var(--surface); }
@@ -336,6 +343,16 @@
       <a class="cat-tile" href="javascript:void(0)" onclick="showPage('page-produkte')">
         <img src="cat-empfehlungen.jpg" alt="Empfehlungen"><div class="cat-tile-scrim"></div><div class="cat-tile-label">Empfehlungen</div>
       </a>
+    </div>
+  </section>
+
+  <section>
+    <div class="submit-card">
+      <div class="submit-card-text">
+        <h2 class="h">Rezept vorschlagen</h2>
+        <p>Kennst du ein gutes Grill-Video oder ein Lieblingsrezept, das hier noch fehlt? Schick uns den Link oder eine kurze Beschreibung — wir schauen es uns an und bereiten es ggf. als eigenes Rezept auf.</p>
+      </div>
+      <a class="submit-card-cta" href="mailto:5hitcake92@gmail.com?subject=Rezeptvorschlag%20f%C3%BCr%20die%20Grillbibel&amp;body=Hallo%2C%0A%0Aich%20habe%20folgenden%20Rezeptvorschlag%3A%0A%0ALink%20(z.B.%20YouTube)%3A%20%0Aoder%20kurze%20Beschreibung%3A%20%0A%0ADanke!">Rezept einsenden →</a>
     </div>
   </section>
 
