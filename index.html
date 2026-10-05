@@ -139,6 +139,11 @@
   .empty-state{ padding:32px 16px; text-align:center; color:var(--muted); font-family:'IBM Plex Mono',monospace; font-size:13px; border:1px dashed var(--line); border-radius:12px; }
 
   footer{ padding-block:22px; border-top:1px solid var(--line); font-size:12.5px; color:var(--muted); font-family:'IBM Plex Mono',monospace; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+  footer .footer-links{ display:flex; gap:14px; }
+  footer .footer-links button{ font:inherit; color:var(--muted); background:none; border:none; padding:0; cursor:pointer; text-decoration:underline; text-underline-offset:2px; }
+  footer .footer-links button:hover{ color:var(--text); }
+  .legal-page p{ font-size:14.5px; line-height:1.6; }
+  .legal-page h2{ margin-top:28px; }
 
   /* ============ RECIPE PAGES ============ */
   .recipe-eyebrow{ font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); font-weight:600; margin:20px 0 6px; }
@@ -367,9 +372,105 @@
 
   <footer>
     <span>Grillbibel — Grundgerüst-Prototyp. Suche &amp; Filter sind funktional, weitere Rezepte folgen laufend.</span>
-    <span>Kohle · Gas · Dutch Oven</span>
+    <div class="footer-links">
+      <button type="button" onclick="showPage('page-impressum')">Impressum</button>
+      <button type="button" onclick="showPage('page-datenschutz')">Datenschutz</button>
+    </div>
   </footer>
 
+</div>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- IMPRESSUM -->
+<!-- ============================================================ -->
+<div class="page" id="page-impressum" hidden>
+<div class="side">
+<div class="wrap-narrow">
+
+  <div class="topbar">
+    <button class="brand" data-home><span class="flame">🔥</span> Grillbibel</button>
+    <button class="home-link" data-home>← Zur Startseite</button>
+  </div>
+
+  <h1 class="recipe-title-h1">Impressum</h1>
+
+  <div class="legal-page">
+    <h2 class="h">Angaben gemäß § 5 DDG</h2>
+    <p>
+      Jan Oberle<br>
+      Uruguay 973<br>
+      Buenos Aires<br>
+      Argentinien
+    </p>
+
+    <h2 class="h">Kontakt</h2>
+    <p>E-Mail: 5hitcake92@gmail.com</p>
+
+    <h2 class="h">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+    <p>
+      Jan Oberle<br>
+      Uruguay 973<br>
+      Buenos Aires<br>
+      Argentinien
+    </p>
+
+    <h2 class="h">Hinweis zu Affiliate-Links</h2>
+    <p>Diese Seite enthält vereinzelt Affiliate-/Partnerlinks (als „Anzeige" gekennzeichnet). Beim Kauf über einen solchen Link erhalte ich ggf. eine kleine Provision, ohne dass sich der Preis für dich ändert.</p>
+
+    <h2 class="h">Haftungshinweis</h2>
+    <p>Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+  </div>
+
+  <div class="recipe-footer">Grillbibel</div>
+</div>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- DATENSCHUTZERKLÄRUNG -->
+<!-- ============================================================ -->
+<div class="page" id="page-datenschutz" hidden>
+<div class="side">
+<div class="wrap-narrow">
+
+  <div class="topbar">
+    <button class="brand" data-home><span class="flame">🔥</span> Grillbibel</button>
+    <button class="home-link" data-home>← Zur Startseite</button>
+  </div>
+
+  <h1 class="recipe-title-h1">Datenschutzerklärung</h1>
+
+  <div class="legal-page">
+    <h2 class="h">Verantwortlicher</h2>
+    <p>
+      Jan Oberle<br>
+      Uruguay 973<br>
+      Buenos Aires, Argentinien<br>
+      E-Mail: 5hitcake92@gmail.com
+    </p>
+
+    <h2 class="h">Hosting</h2>
+    <p>Diese Website wird über GitHub Pages gehostet (GitHub, Inc., 88 Colin P. Kelly Jr. St, San Francisco, CA 94107, USA). Beim Aufruf der Seite verarbeitet GitHub automatisch technische Daten (u.a. IP-Adresse, Zeitpunkt des Zugriffs) in Server-Logs, um die Seite auszuliefern. Dies geschieht unabhängig von meinem Einfluss; weitere Informationen findest du in der <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von GitHub</a>.</p>
+
+    <h2 class="h">Lokale Speicherung (Favoriten)</h2>
+    <p>Wenn du Rezepte als Favorit markierst, wird diese Auswahl ausschließlich lokal in deinem Browser gespeichert (localStorage). Diese Daten verlassen deinen Browser nicht und werden nicht an mich oder Dritte übermittelt. Du kannst sie jederzeit über die Browser-Einstellungen löschen.</p>
+
+    <h2 class="h">Keine Cookies, kein Tracking</h2>
+    <p>Diese Seite setzt keine Cookies und keine Analyse- oder Tracking-Tools (z.B. Google Analytics) ein.</p>
+
+    <h2 class="h">Rezeptvorschläge per E-Mail</h2>
+    <p>Wenn du über den Button „Rezept einsenden" einen Vorschlag schickst, öffnet sich dein eigenes E-Mail-Programm. Die Übermittlung erfolgt freiwillig direkt an meine E-Mail-Adresse (5hitcake92@gmail.com) und unterliegt den Datenschutzbestimmungen deines E-Mail-Anbieters. Ich nutze die übermittelten Daten ausschließlich, um den Rezeptvorschlag zu bearbeiten.</p>
+
+    <h2 class="h">Affiliate-Links</h2>
+    <p>Einzelne als „Anzeige" gekennzeichnete Links führen zu externen Partnerseiten (z.B. Digistore24-Angeboten). Nach dem Klick gelten die Datenschutzbestimmungen des jeweiligen Anbieters; ich habe auf die dortige Datenverarbeitung keinen Einfluss.</p>
+
+    <h2 class="h">Deine Rechte</h2>
+    <p>Da auf dieser Seite keine personenbezogenen Daten durch mich serverseitig gespeichert oder verarbeitet werden, bestehen aktuell keine entsprechenden Datenbestände bei mir, auf die sich Auskunfts-, Berichtigungs- oder Löschungsrechte beziehen könnten. Bei Fragen kannst du dich jederzeit per E-Mail an mich wenden.</p>
+  </div>
+
+  <div class="recipe-footer">Grillbibel</div>
 </div>
 </div>
 </div>
